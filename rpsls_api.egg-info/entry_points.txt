@@ -1,0 +1,3 @@
+[console_scripts]
+rpsls_api = rpsls_api.manage:cli
+
