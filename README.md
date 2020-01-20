@@ -12,3 +12,5 @@ Pre-requisites
 
  Run tests
  - pytest
+
+ You can go to your-url/api/v1 to view swagger docs
