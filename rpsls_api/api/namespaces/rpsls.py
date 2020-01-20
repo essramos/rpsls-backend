@@ -19,7 +19,15 @@ class PlayResource(Resource):
     def post(self):
         body = request.get_json()
         user_choice_id = body.get('player')
-        comp_choice = choice_helper.generate_computer_choice()
+
+        try:
+            comp_choice = choice_helper.generate_computer_choice()
+        except Exception as e:
+            return {"error": "error generating computer choice. Reason{}".format(e.args)}, 400
+
+        # another idea is to store combinations of choices with what they can beat
+        # e.g {spock: ['scissor', 'rock']}
+        # if user_choice == spock tie, else if user_choice in spock, user loses, else user wins
 
         d = (user_choice_id - comp_choice + 5) % 5
 

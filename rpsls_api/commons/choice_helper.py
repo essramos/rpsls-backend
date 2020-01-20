@@ -10,9 +10,9 @@ def generate_computer_choice():
         return 1
     elif random_num <= 2:
         return 2
-    elif random_num <= 3: 
+    elif random_num <= 3:
         return 3
-    elif random_num <= 4: 
+    elif random_num <= 4:
         return 4
     elif random_num <= 5:
         return 5
